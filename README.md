@@ -1,4 +1,4 @@
-# Intelligent Trading Platform:TradeMind AI
+# Intelligent Trading Platform : TradeMind AI
 
 An intelligent, data-driven trading platform designed to assist traders and investors with market analysis, trading signal generation, portfolio management, and risk assessment.
 
