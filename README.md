@@ -148,5 +148,5 @@ This project is licensed under the **MIT License**. It is intended for education
 ---
 
 <p align="center">
-  Developed by <strong>Harshit</strong> • TradeMind AI Platform
+  Developed by <strong>Aditya</strong> • TradeMind AI Platform
 </p>
