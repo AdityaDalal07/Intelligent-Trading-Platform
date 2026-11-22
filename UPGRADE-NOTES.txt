@@ -1,0 +1,21 @@
+TradeMind AI – UX and market-data upgrade
+
+Changes included:
+1. Stock detail chart range buttons now load a matching Yahoo Finance historical window: 1W, 1M, 3M, 6M, 1Y and ALL (up to the available Yahoo Finance history, capped at roughly 100 years by the request window).
+2. Global header search now calls Yahoo Finance symbol search and shows company-name, ticker and exchange suggestions. Press Enter to open the first suggestion.
+3. Market Overview search now also shows Yahoo Finance autocomplete suggestions, including stocks outside the default market table list.
+4. Notification bell now opens a panel. It displays recent wallet/trade transactions for the signed-in account, timestamps, links to Wallet/Portfolio, and locally persisted read status.
+5. Added GET /api/notifications for account-scoped recent transaction activity.
+
+Setup:
+- Keep your existing .env file and secrets; do not replace it with .env.example.
+- From the project folder run: npm install
+- Then run: npx prisma generate
+- Then run: npx prisma db push
+- Start with: npm run dev
+
+Notes:
+- Yahoo Finance data is supplied by yahoo-finance2 and is not an exchange-grade real-time feed. Availability, delay, throttling and symbol coverage are controlled by Yahoo Finance.
+- The Market Overview's default table remains a curated popular-stock list; use autocomplete to discover additional Yahoo Finance symbols.
+- Notification history is based on persisted wallet/trade Transaction records. Read/unread state is stored in the current browser's local storage.
+- The edited TypeScript/TSX files passed a syntax transpilation check. A complete Next.js build was not run because dependency installation timed out in this environment; run npm install and npm run build locally to validate against your installed dependency tree.
